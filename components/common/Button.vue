@@ -10,7 +10,7 @@
     },
     size: {
       type: String,
-      default: 'md', // xs, sm, md, lg, xl
+      default: 'md', // sm, md, lg
     },
     disabled: {
       type: Boolean,
@@ -28,7 +28,7 @@
 
   const buttonClass = computed(() => {
     const baseClass =
-      'inline-flex items-center justify-center font-medium transition-colors rounded focus:outline-none tracking-wider';
+      'inline-flex items-center justify-center transition-colors rounded-md font-normal focus:outline-none tracking-wider';
 
     const getVariantClasses = (
       color: string,
@@ -41,109 +41,109 @@
           solid:
             disabled || loading
               ? 'text-white bg-gray-600'
-              : 'text-white bg-gray-600 hover:bg-gray-700',
+              : 'text-white bg-gray-600 hover:bg-opacity-90',
           text:
             disabled || loading
               ? 'text-gray-600'
-              : 'text-gray-600 hover:text-gray-700',
+              : 'text-gray-600 bg-gray-600 hover:bg-opacity-5',
           outline:
             disabled || loading
               ? 'text-gray-600 bg-gray-600 bg-opacity-0'
-              : 'text-gray-600 bg-gray-600 bg-opacity-0 hover:bg-opacity-10',
+              : 'text-gray-600 bg-gray-600 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-gray-600 bg-gray-600 bg-opacity-10'
-              : 'text-gray-600 bg-gray-600 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-gray-600 bg-gray-600 bg-opacity-5'
+              : 'text-gray-600 bg-gray-600 bg-opacity-5 hover:bg-opacity-10',
         },
         primary: {
           solid:
             disabled || loading
-              ? 'text-white bg-blue-500'
-              : 'text-white bg-blue-500 hover:bg-blue-600',
+              ? 'text-white bg-primary-700'
+              : 'text-white bg-primary-700 hover:bg-opacity-90',
           text:
             disabled || loading
-              ? 'text-blue-600'
-              : 'text-blue-600 hover:text-blue-700',
+              ? 'text-primary-700'
+              : 'text-primary-700 bg-primary-700 hover:bg-opacity-5',
           outline:
             disabled || loading
-              ? 'text-blue-600 bg-blue-500 bg-opacity-0'
-              : 'text-blue-600 bg-blue-500 bg-opacity-0 hover:bg-opacity-10',
+              ? 'text-primary-700 bg-primary-700 bg-opacity-0'
+              : 'text-primary-700 bg-primary-700 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-blue-600 bg-blue-500 bg-opacity-10'
-              : 'text-blue-600 bg-blue-500 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-primary-700 bg-primary-700 bg-opacity-5'
+              : 'text-primary-700 bg-primary-700 bg-opacity-5 hover:bg-opacity-10',
         },
         info: {
           solid:
             disabled || loading
-              ? 'text-white bg-blue-500'
-              : 'text-white bg-blue-500 hover:bg-blue-600',
+              ? 'text-white bg-primary-500'
+              : 'text-white bg-primary-500 hover:bg-opacity-90',
           text:
             disabled || loading
-              ? 'text-blue-600'
-              : 'text-blue-600 hover:text-blue-700',
+              ? 'text-primary-500'
+              : 'text-primary-500 bg-primary-500 hover:bg-opacity-5',
           outline:
             disabled || loading
-              ? 'text-blue-600 bg-blue-500 bg-opacity-0'
-              : 'text-blue-600 bg-blue-500 bg-opacity-0 hover:bg-opacity-10',
+              ? 'text-primary-500 bg-primary-500 bg-opacity-0'
+              : 'text-primary-500 bg-primary-500 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-blue-600 bg-blue-500 bg-opacity-10'
-              : 'text-blue-600 bg-blue-500 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-primary-500 bg-primary-500 bg-opacity-5'
+              : 'text-primary-500 bg-primary-500 bg-opacity-5 hover:bg-opacity-10',
         },
         success: {
           solid:
             disabled || loading
               ? 'text-white bg-green-500'
-              : 'text-white bg-green-500 hover:bg-green-600',
+              : 'text-white bg-green-500 hover:bg-opacity-90',
           text:
             disabled || loading
-              ? 'text-green-600'
-              : 'text-green-600 hover:text-green-700',
+              ? 'text-green-500'
+              : 'text-green-500 bg-green-500 hover:bg-opacity-5',
           outline:
             disabled || loading
-              ? 'text-green-600 bg-green-500 bg-opacity-0'
-              : 'text-green-600 bg-green-500 bg-opacity-0 hover:bg-opacity-10',
+              ? 'text-green-500 bg-green-500 bg-opacity-0'
+              : 'text-green-500 bg-green-500 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-green-600 bg-green-500 bg-opacity-10'
-              : 'text-green-600 bg-green-500 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-green-500 bg-green-500 bg-opacity-5'
+              : 'text-green-500 bg-green-500 bg-opacity-5 hover:bg-opacity-10',
         },
         warning: {
           solid:
             disabled || loading
-              ? 'text-white bg-yellow-500'
-              : 'text-white bg-yellow-500 hover:bg-yellow-600',
+              ? 'text-white bg-amber-400'
+              : 'text-white bg-amber-400 hover:bg-opacity-90',
           text:
             disabled || loading
-              ? 'text-yellow-600'
-              : 'text-yellow-600 hover:text-yellow-700',
+              ? 'text-amber-400'
+              : 'text-amber-400 bg-amber-400 hover:bg-opacity-5',
           outline:
             disabled || loading
-              ? 'text-yellow-600 bg-yellow-500 bg-opacity-0'
-              : 'text-yellow-600 bg-yellow-500 bg-opacity-0 hover:bg-opacity-10',
+              ? 'text-amber-400 bg-amber-400 bg-opacity-0'
+              : 'text-amber-400 bg-amber-400 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-yellow-600 bg-yellow-500 bg-opacity-10'
-              : 'text-yellow-600 bg-yellow-500 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-amber-400 bg-amber-400 bg-opacity-5'
+              : 'text-amber-400 bg-amber-400 bg-opacity-5 hover:bg-opacity-10',
         },
         error: {
           solid:
             disabled || loading
               ? 'text-white bg-red-500'
-              : 'text-white bg-red-500 hover:bg-red-600',
+              : 'text-white bg-red-500 hover:bg-opacity-90',
           text:
             disabled || loading
-              ? 'text-red-600'
-              : 'text-red-600 hover:text-red-700',
+              ? 'text-red-500'
+              : 'text-red-500 bg-red-500 hover:bg-opacity-5',
           outline:
             disabled || loading
-              ? 'text-red-600 bg-red-500 bg-opacity-0'
-              : 'text-red-600 bg-red-500 bg-opacity-0 hover:bg-opacity-10',
+              ? 'text-red-500 bg-red-500 bg-opacity-0'
+              : 'text-red-500 bg-red-500 bg-opacity-0 hover:bg-opacity-5',
           soft:
             disabled || loading
-              ? 'text-red-600 bg-red-500 bg-opacity-10'
-              : 'text-red-600 bg-red-500 bg-opacity-10 hover:bg-opacity-20',
+              ? 'text-red-500 bg-red-500 bg-opacity-5'
+              : 'text-red-500 bg-red-500 bg-opacity-5 hover:bg-opacity-10',
         },
       };
 
@@ -191,17 +191,15 @@
 
     const variantClasses: Record<string, string> = {
       solid: '',
-      text: 'bg-transparent',
+      text: 'bg-opacity-0',
       outline: 'border border-current',
       soft: 'bg-opacity-10',
     };
 
     const sizeClasses: Record<string, string> = {
-      xs: props.loading ? 'pl-1.5 pr-2.5 h-7 text-xs' : 'px-2.5 h-7 text-xs',
-      sm: props.loading ? 'pl-2 pr-3 h-8 text-sm' : 'px-3 h-8 text-sm',
-      md: props.loading ? 'pl-2.5 pr-4 h-9 text-base' : 'px-4 h-9 text-base',
+      sm: props.loading ? 'pl-2 pr-3 h-8 text-xs' : 'px-3 h-8 text-xs',
+      md: props.loading ? 'pl-2.5 pr-4 h-9 text-sm' : 'px-4 h-9 text-sm',
       lg: props.loading ? 'pl-3 pr-5 h-11 text-base' : 'px-5 h-11 text-base',
-      xl: props.loading ? 'pl-3 pr-6 h-12 text-lg' : 'px-6 h-12 text-lg',
     };
 
     const disabledClass = props.disabled ? 'opacity-50 cursor-not-allowed' : '';
@@ -219,23 +217,6 @@
     ].join(' ');
   });
 
-  const iconSize = computed(() => {
-    switch (props.size) {
-      case 'xs':
-        return 'sm';
-      case 'sm':
-        return 'sm';
-      case 'md':
-        return 'md';
-      case 'lg':
-        return 'md';
-      case 'xl':
-        return 'md';
-      default:
-        return 'md';
-    }
-  });
-
   const emit = defineEmits(['click']);
   const handleClick = () => {
     emit('click');
@@ -244,9 +225,13 @@
 
 <template>
   <button :class="buttonClass" :disabled="props.disabled" @click="handleClick">
-    <span v-if="props.loading" class="mr-2">
-      <CommonIcon :size="iconSize" name="arrow-path" spinning />
-    </span>
+    <CommonIcon
+      v-if="props.loading"
+      size="sm"
+      name="arrow-path"
+      class="mr-2"
+      spinning
+    />
     <slot />
   </button>
 </template>

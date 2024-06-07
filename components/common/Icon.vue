@@ -36,7 +36,7 @@
   const iconSizeClass = computed(() => {
     switch (props.size) {
       case 'sm':
-        return 'w-4 h-4';
+        return 'w-5 h-5';
       case 'lg':
         return 'w-8 h-8';
       case 'md':
